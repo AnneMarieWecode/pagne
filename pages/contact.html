@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - Pagnes Élégance</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/contact.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="main-nav">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="text-2xl font-bold text-yellow-700">
+                        <span class="text-3xl">P</span>agnes<span class="text-yellow-600">Élégance</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Accueil</a>
+                    <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Qui sommes-nous</a>
+                    <a href="collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Collections</a>
+                    <a href="recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Rechercher</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium font-bold">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="commande.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                        Faire une commande
+                    </a>
+                    <button class="text-gray-700 md:hidden" id="mobile-menu-button">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden transition-all duration-300 pt-4 pb-2" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Accueil</a>
+                    <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Qui sommes-nous</a>
+                    <a href="collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Collections</a>
+                    <a href="recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Rechercher</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gray-900 text-white">
+        <div class="absolute inset-0 overflow-hidden opacity-30">
+            <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Pagnes africains" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Contactez-nous</h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">Nous sommes à votre écoute pour toutes vos questions sur nos pagnes traditionnels africains</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#form-section" class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-lg inline-flex items-center font-medium transition-colors">
+                        <i class="fas fa-envelope mr-2"></i> Nous écrire
+                    </a>
+                    <a href="tel:+22320223344" class="bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 rounded-lg inline-flex items-center font-medium transition-colors">
+                        <i class="fas fa-phone-alt mr-2 text-yellow-600"></i> +225 20 22 33 44
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Section -->
+    <section class="py-16 bg-white section-reveal">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nos coordonnées</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Différentes façons de nous contacter pour toutes vos questions sur nos pagnes traditionnels africains.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Address -->
+                <div class="bg-white rounded-lg shadow-md p-6 contact-icon-box text-center">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Notre adresse</h3>
+                    <p class="text-gray-600 mb-4">Abidjan, Côte d'Ivoire</p>
+                    <a href="https://maps.google.com" target="_blank" class="text-yellow-600 hover:text-yellow-700 font-medium inline-flex items-center">
+                        <span>Voir sur la carte</span> 
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Contact -->
+                <div class="bg-white rounded-lg shadow-md p-6 contact-icon-box text-center">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Téléphone & Email</h3>
+                    <p class="text-gray-600 mb-2">+223 20 22 33 44</p>
+                    <p class="text-gray-600 mb-4">contact@pagneselegance.com</p>
+                    <a href="mailto:contact@pagneselegance.com" class="text-yellow-600 hover:text-yellow-700 font-medium inline-flex items-center">
+                        <span>Envoyez-nous un email</span> 
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Hours -->
+                <div class="bg-white rounded-lg shadow-md p-6 contact-icon-box text-center">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Horaires d'ouverture</h3>
+                    <p class="text-gray-600 mb-2">Lundi - Vendredi: 9h - 18h</p>
+                    <p class="text-gray-600 mb-4">Samedi: 9h - 16h</p>
+                    <a href="#form-section" class="text-yellow-600 hover:text-yellow-700 font-medium inline-flex items-center">
+                        <span>Prendre rendez-vous</span> 
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-12 bg-gray-100 section-reveal">
+        <div class="container mx-auto px-4">
+            <div class="map-container shadow-lg">
+                <div class="bg-gray-200 w-full h-full flex items-center justify-center">
+                    <img src="/api/placeholder/1200/300" alt="Location map" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="form-section" class="py-16 bg-white section-reveal">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Envoyez-nous un message</h2>
+                    <p class="text-gray-600">Vous avez des questions sur nos pagnes traditionnels ou vous souhaitez passer une commande spéciale? Contactez-nous!</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <form id="contact-form" class="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <!-- Name -->
+                            <div class="form-floating">
+                                <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none placeholder-transparent" placeholder=" ">
+                                <label for="name">Nom complet</label>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="form-floating">
+                                <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none placeholder-transparent" placeholder=" ">
+                                <label for="email">Adresse email</label>
+                            </div>
+                            
+                            <!-- Phone -->
+                            <div class="form-floating">
+                                <input type="tel" id="phone" name="phone" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none placeholder-transparent" placeholder=" ">
+                                <label for="phone">Numéro de téléphone</label>
+                            </div>
+                            
+                            <!-- Subject -->
+                            <div class="form-floating">
+                                <select id="subject" name="subject" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none bg-white placeholder-transparent appearance-none">
+                                    <option value="" selected disabled></option>
+                                    <option value="commande">Question sur une commande</option>
+                                    <option value="info">Demande d'information</option>
+                                    <option value="personnalisation">Personnalisation de pagne</option>
+                                    <option value="partenariat">Partenariat</option>
+                                    <option value="autre">Autre demande</option>
+                                </select>
+                                <label for="subject">Sujet</label>
+                            </div>
+                        </div>
+                        
+                        <!-- Message -->
+                        <div class="form-floating mb-6">
+                            <textarea id="message" name="message" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none placeholder-transparent"></textarea>
+                            <label for="message">Votre message</label>
+                        </div>
+                        
+                        <!-- Preferences -->
+                        <div class="mb-6">
+                            <h4 class="text-gray-700 font-medium mb-3">Je suis intéressé(e) par :</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests" value="wax" class="form-checkbox text-yellow-600 focus:ring-yellow-500">
+                                    <span class="ml-2 text-gray-700">Pagnes Wax</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests" value="kente" class="form-checkbox text-yellow-600 focus:ring-yellow-500">
+                                    <span class="ml-2 text-gray-700">Tissus Kente</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests" value="bogolan" class="form-checkbox text-yellow-600 focus:ring-yellow-500">
+                                    <span class="ml-2 text-gray-700">Bogolan</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests" value="bazin" class="form-checkbox text-yellow-600 focus:ring-yellow-500">
+                                    <span class="ml-2 text-gray-700">Bazin riche</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests" value="sur_mesure" class="form-checkbox text-yellow-600 focus:ring-yellow-500">
+                                    <span class="ml-2 text-gray-700">Création sur mesure</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Newsletter -->
+                        <div class="mb-8">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="newsletter" value="yes" class="form-checkbox text-yellow-600 focus:ring-yellow-500">
+                                <span class="ml-2 text-gray-700">Je souhaite recevoir les nouveautés et offres spéciales par email</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
+                                <i class="fas fa-paper-plane mr-2"></i> Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-100 section-reveal">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Questions fréquentes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Retrouvez les réponses aux questions les plus posées sur nos pagnes traditionnels.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <span class="font-medium text-gray-800">Comment puis-je commander un pagne personnalisé ?</span>
+                            <i class="fas fa-chevron-down text-yellow-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600">Pour commander un pagne personnalisé, contactez-nous via notre formulaire en précisant vos besoins spécifiques (motifs, couleurs, dimensions). Notre équipe vous contactera pour discuter des détails et vous proposer un devis adapté à votre demande.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <span class="font-medium text-gray-800">Quels sont les délais de livraison ?</span>
+                            <i class="fas fa-chevron-down text-yellow-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600">Les délais de livraison dépendent de votre localisation. En général, comptez 2-3 jours ouvrables pour les livraisons à Bamako, 5-7 jours pour le reste du Mali, et 10-15 jours pour les livraisons internationales. Les pagnes personnalisés peuvent nécessiter un délai supplémentaire de production.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <span class="font-medium text-gray-800">Comment entretenir mes pagnes traditionnels ?</span>
+                            <i class="fas fa-chevron-down text-yellow-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600">Pour préserver la beauté et la durabilité de vos pagnes, nous recommandons un lavage à la main avec un savon doux et de l'eau tiède. Évitez l'exposition prolongée au soleil et le repassage à haute température. Chaque type de tissu nécessite un soin particulier, nous incluons des instructions d'entretien spécifiques avec chaque commande.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <span class="font-medium text-gray-800">Proposez-vous des services de couture ?</span>
+                            <i class="fas fa-chevron-down text-yellow-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600">Oui, nous collaborons avec des tailleurs expérimentés qui peuvent transformer vos pagnes en vêtements sur mesure. Qu'il s'agisse de robes, chemises, jupes ou ensembles traditionnels, nous pouvons créer des pièces uniques selon vos mesures et préférences. Contactez-nous pour plus d'informations sur ce service.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <button class="faq-toggle w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                            <span class="font-medium text-gray-800">Acceptez-vous les retours ou échanges ?</span>
+                            <i class="fas fa-chevron-down text-yellow-600 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-4">
+                            <p class="text-gray-600">Oui, nous acceptons les retours et échanges dans les 14 jours suivant la réception de votre commande, à condition que les articles soient dans leur état d'origine, non utilisés et avec leurs étiquettes. Les frais de retour sont à la charge du client. Les pagnes personnalisés ne sont ni repris ni échangés, sauf en cas de défaut de fabrication.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-xl font-bold mb-4">
+                        <span class="text-2xl">P</span>agnes<span class="text-yellow-500">Élégance</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">L'authentique élégance africaine, tissu après tissu.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Liens Rapides</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Collection</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Nouveautés</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Promotions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Histoire</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Service Client</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Mon Compte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Suivi de Commande</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Retours & Échanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">Abidjan, Côte d'Ivoire</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">+225 20 22 33 44</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">contact@pagneselegance.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">Lun-Sam: 9h-18h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+                <p>&copy; 2025 Pagnes Élégance. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/contact.js"></script>
+</body>
+</html>

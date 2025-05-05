@@ -1,0 +1,517 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagnes Élégance - Pagnes Traditionnels Africains</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body class="bg-gray-50">
+        <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="main-nav">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <div class="text-2xl font-bold text-yellow-700">
+                            <span class="text-3xl">P</span>agnes<span class="text-yellow-600">Élégance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Accueil</a>
+                        <a href="pages/qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Qui sommes-nous</a>
+                        <a href="pages/collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Collections</a>
+                        <a href="pages/recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Rechercher</a>
+                        <a href="pages/contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <a href="pages/commande.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                            Faire une commande
+                        </a>
+                        <button class="text-gray-700 md:hidden" id="mobile-menu-button">
+                            <i class="fas fa-bars text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="md:hidden hidden transition-all duration-300 pt-4 pb-2" id="mobile-menu">
+                    <div class="flex flex-col space-y-3">
+                        <a href="#" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Accueil</a>
+                        <a href="pages/qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Qui sommes-nou</a>
+                        <a href="pages/collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Collections</a>
+                        <a href="pages/recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Rechercher</a>
+                        <a href="pages/contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative h-screen">
+            <div class="pattern-bg absolute inset-0"></div>
+            <div class="carousel h-full">
+                <div class="carousel-container h-full">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item relative h-full">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></div>
+                        <div class="hero-overlay absolute inset-0"></div>
+                        <div class="container mx-auto px-4 h-full flex items-center">
+                            <div class="max-w-lg text-white animate-slide-right" style="animation-delay: 0.3s;">
+                                <h1 class="text-4xl md:text-6xl font-bold mb-4">Découvrez l'Élégance des Pagnes Africains</h1>
+                                <p class="text-lg mb-8 opacity-90">Des tissus authentiques pour célébrer votre héritage et exprimer votre style unique.</p>
+                                <div class="flex space-x-4">
+                                    <a href="#collection" class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                                        Voir la collection
+                                    </a>
+                                    <a href="#featured" class="border-2 border-white hover:bg-white hover:text-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all">
+                                        Nouveautés
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item relative h-full">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://img.freepik.com/vecteurs-premium/mois-histoire-noirs-couleurs-ethniques-sans-couture_1105619-14.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></div>
+                        <div class="hero-overlay absolute inset-0"></div>
+                        <div class="container mx-auto px-4 h-full flex items-center">
+                            <div class="max-w-lg text-white animate-slide-right" style="animation-delay: 0.3s;">
+                                <h1 class="text-4xl md:text-6xl font-bold mb-4">Excellence Artisanale & Tradition</h1>
+                                <p class="text-lg mb-8 opacity-90">Des motifs uniques qui racontent des histoires et transmettent notre riche patrimoine culturel.</p>
+                                <div class="flex space-x-4">
+                                    <a href="#collection" class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                                        Explorer
+                                    </a>
+                                    <a href="#featured" class="border-2 border-white hover:bg-white hover:text-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all">
+                                        Notre histoire
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item relative h-full">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://img.freepik.com/vecteurs-libre/conception-modele-africain-plat_23-2149367273.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></div>
+                        <div class="hero-overlay absolute inset-0"></div>
+                        <div class="container mx-auto px-4 h-full flex items-center">
+                            <div class="max-w-lg text-white animate-slide-right" style="animation-delay: 0.3s;">
+                                <h1 class="text-4xl md:text-6xl font-bold mb-4">Qualité & Authenticité</h1>
+                                <p class="text-lg mb-8 opacity-90">Des tissus d'exception, soigneusement sélectionnés pour votre plus grand plaisir.</p>
+                                <div class="flex space-x-4">
+                                    <a href="#collection" class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                                        Acheter maintenant
+                                    </a>
+                                    <a href="#featured" class="border-2 border-white hover:bg-white hover:text-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all">
+                                        Témoignages
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all" id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all" id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-3">
+                    <button class="w-3 h-3 rounded-full bg-white bg-opacity-60 carousel-indicator active"></button>
+                    <button class="w-3 h-3 rounded-full bg-white bg-opacity-60 carousel-indicator"></button>
+                    <button class="w-3 h-3 rounded-full bg-white bg-opacity-60 carousel-indicator"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characteristics -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center text-center scroll-reveal">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-certificate text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Qualité Garantie</h3>
+                        <p class="text-gray-600">Tous nos pagnes sont soigneusement sélectionnés pour leur qualité exceptionnelle.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center scroll-reveal">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-truck text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Livraison locale</h3>
+                        <p class="text-gray-600">Nous expédions nos produits sur le territoire ivoirien à des prix compétitifs.</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center scroll-reveal">
+                        <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-heart text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Artisanat Authentique</h3>
+                        <p class="text-gray-600">Soutenez les artisans locaux et préservez les techniques traditionnelles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Nos Catégories</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Explorez notre large gamme de pagnes traditionnels africains, disponibles dans différents styles et motifs.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="relative h-80 bg-cover bg-center rounded-lg overflow-hidden shadow-lg scroll-reveal animate-scale" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-1">Wax Premium</h3>
+                            <p class="mb-4 text-sm opacity-90">Les tissus wax de la plus haute qualité</p>
+                            <a href="#" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Découvrir
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative h-80 bg-cover bg-center rounded-lg overflow-hidden shadow-lg scroll-reveal animate-scale" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-1">Kente Traditionnel</h3>
+                            <p class="mb-4 text-sm opacity-90">Tissus royaux avec des motifs symboliques</p>
+                            <a href="#" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Découvrir
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative h-80 bg-cover bg-center rounded-lg overflow-hidden shadow-lg scroll-reveal animate-scale" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-1">Bazin Riche</h3>
+                            <p class="mb-4 text-sm opacity-90">L'élégance et le luxe dans chaque fibre</p>
+                            <a href="#" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Découvrir
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative h-80 bg-cover bg-center rounded-lg overflow-hidden shadow-lg scroll-reveal animate-scale" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                            <h3 class="text-xl font-bold mb-1">Bogolan</h3>
+                            <p class="mb-4 text-sm opacity-90">Art ancestral aux motifs uniques</p>
+                            <a href="#" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                                Découvrir
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Nos collections</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Découvrez nos dernières additions à la collection, soigneusement sélectionnées pour vous.</p>
+                </div>
+                
+                <div class="collections-grid">
+                    <!-- Pagne 1 -->
+                    <div class="pagne-card">
+                        <div class="pagne-image">
+                            <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Pagne Kita">
+                        </div>
+                        <div class="pagne-info">
+                            <h3 class="pagne-name">Bogolan Kita</h3>
+                            <p class="pagne-description">Pagne traditionnel du Mali avec motifs symbolisant force et courage.</p>
+                            <div class="pagne-price">25 000 FCFA</div>
+                            <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                        </div>
+                    </div>
+    
+                    <!-- Pagne 2 -->
+                    <div class="pagne-card">
+                        <div class="pagne-image">
+                            <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Wax Floral">
+                        </div>
+                        <div class="pagne-info">
+                            <h3 class="pagne-name">Wax Floral Élégance</h3>
+                            <p class="pagne-description">Motifs floraux vibrants sur fond bleu profond, idéal pour occasions spéciales.</p>
+                            <div class="pagne-price">18 500 FCFA</div>
+                            <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                        </div>
+                    </div>
+    
+                    <!-- Pagne 3 -->
+                    <div class="pagne-card">
+                        <div class="pagne-image">
+                            <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Kente Royal">
+                        </div>
+                        <div class="pagne-info">
+                            <h3 class="pagne-name">Kente Royal</h3>
+                            <p class="pagne-description">Tissage traditionnel ghanéen aux couleurs vives, porté lors des cérémonies.</p>
+                            <div class="pagne-price">35 000 FCFA</div>
+                            <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                        </div>
+                    </div>
+    
+                    <!-- Pagne 4 -->
+                    <div class="pagne-card">
+                        <div class="pagne-image">
+                            <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Bazin Riche">
+                        </div>
+                        <div class="pagne-info">
+                            <h3 class="pagne-name">Bazin Riche Brodé</h3>
+                            <p class="pagne-description">Bazin de haute qualité avec broderies dorées, symbole de prestige.</p>
+                            <div class="pagne-price">28 000 FCFA</div>
+                            <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="text-center mt-10">
+                    <a href="pages/collection.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                        Voir toute la collection
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-yellow-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="scroll-reveal">
+                        <div class="relative">
+                            <div class="absolute -left-4 -top-4 w-24 h-24 bg-yellow-200 rounded-lg"></div>
+                            <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-yellow-400 rounded-lg"></div>
+                            <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Artisans travaillant sur des pagnes" class="rounded-lg shadow-lg relative z-10 w-full">
+                        </div>
+                    </div>
+                    
+                    <div class="scroll-reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Notre Histoire & Notre Mission</h2>
+                        <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                            <div class="flex items-start mb-3">
+                                <div class="text-yellow-600 mr-3 text-xl">❝</div>
+                                <p class="italic text-gray-700 typing-animation" style="width: 100%; max-width: 500px;">Nous mettons en avant le savoir-faire ancestral des artisans africains et préservons notre riche héritage culturel.</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            PagnesÉlégance s'engage à promouvoir l'artisanat textile africain authentique. Nous travaillons directement avec des artisans talentueux de différentes régions d'Afrique pour vous offrir des pagnes de la plus haute qualité.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Notre mission est de valoriser cet art ancestral tout en permettant aux artisans de vivre dignement de leur savoir-faire. Chaque pièce raconte une histoire et porte en elle la richesse de notre patrimoine culturel.
+                        </p>
+                    <a href="#collection" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-6 rounded-full transition-all transform hover:scale-105 mt-2">
+                            Découvrir notre histoire
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Ce que disent nos clients</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Découvrez les expériences de nos clients satisfaits du monde entier.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-yellow-50 p-6 rounded-lg shadow-md scroll-reveal">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"La qualité des pagnes est exceptionnelle! Les couleurs sont vibrantes et le tissu est résistant. Je reçois toujours des compliments quand je porte mes créations."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-cover bg-center mr-3" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></div>
+                            <div>
+                                <h4 class="font-semibold">Aminata K.</h4>
+                                <p class="text-gray-500 text-sm">Dakar, Sénégal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 p-6 rounded-lg shadow-md scroll-reveal">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"Service client remarquable et livraison rapide jusqu'en France. Les pagnes que j'ai commandés sont magnifiques et fidèles aux photos. Je recommande vivement!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-cover bg-center mr-3" style="background-image: url('/https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></div>
+                            <div>
+                                <h4 class="font-semibold">Sophie M.</h4>
+                                <p class="text-gray-500 text-sm">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 p-6 rounded-lg shadow-md scroll-reveal">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic mb-4">"J'adore mon Kente traditionnel! Le savoir-faire artisanal est évident et le rapport qualité-prix est excellent. Je suis fier de porter un vêtement qui célèbre notre culture."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-cover bg-center mr-3" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></div>
+                            <div>
+                                <h4 class="font-semibold">Kofi A.</h4>
+                                <p class="text-gray-500 text-sm">Accra, Ghana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed -->
+      <!--  <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-2">Suivez-nous sur Instagram</h2>
+                    <p class="text-gray-600">@pagnes_elegance</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                    <a href="#" class="block aspect-square overflow-hidden bg-cover bg-center hover:opacity-90 transition-opacity scroll-reveal" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></a>
+                    <a href="#" class="block aspect-square overflow-hidden bg-cover bg-center hover:opacity-90 transition-opacity scroll-reveal" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></a>
+                    <a href="#" class="block aspect-square overflow-hidden bg-cover bg-center hover:opacity-90 transition-opacity scroll-reveal" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></a>
+                    <a href="#" class="block aspect-square overflow-hidden bg-cover bg-center hover:opacity-90 transition-opacity scroll-reveal" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></a>
+                    <a href="#" class="block aspect-square overflow-hidden bg-cover bg-center hover:opacity-90 transition-opacity scroll-reveal" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></a>
+                    <a href="#" class="block aspect-square overflow-hidden bg-cover bg-center hover:opacity-90 transition-opacity scroll-reveal" style="background-image: url('https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740')"></a>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="py-8 bg-yellow-50 w-full">
+            <div class="container mx-auto px-4">
+                <div class="p-6 md:p-10 max-w-4xl mx-auto text-center animate-slide-up">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-yellow-700">Rejoignez Notre Aventure</h2>
+                    <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Vous êtes passionné par les textiles africains ? Vous souhaitez en savoir plus sur notre entreprise ou explorer des possibilités de collaboration ?</p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center">
+                        <a href="pages/contact.html" class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg text-center">
+                            Contactez-nous
+                        </a>
+                        <a href="pages/collection.html" class="border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white text-yellow-600 font-medium py-3 px-8 rounded-full transition-all text-center">
+                            Visitez nos boutiques
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="bg-gray-900 text-white py-10 md:py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Brand -->
+                    <div>
+                        <div class="text-xl font-bold mb-4">
+                            <span class="text-2xl">P</span>agnes<span class="text-yellow-500">Élégance</span>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm">L'authentique élégance africaine, tissu après tissu.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-semibold text-lg mb-4 text-yellow-500">Liens Rapides</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Collection</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Nouveautés</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Promotions</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Histoire</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Customer Service -->
+                    <div>
+                        <h3 class="font-semibold text-lg mb-4 text-yellow-500">Service Client</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Mon Compte</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Suivi de Commande</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">FAQ</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Retours & Échanges</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Contactez-nous</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="font-semibold text-lg mb-4 text-yellow-500">Contact</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
+                                <span class="text-gray-400">Abidjan, Côte d'Ivoire</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
+                                <span class="text-gray-400">+225 20 22 33 44</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3 text-yellow-500"></i>
+                                <span class="text-gray-400">contact@pagneselegance.com</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-clock mt-1 mr-3 text-yellow-500"></i>
+                                <span class="text-gray-400">Lun-Sam: 9h-18h</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+                    <p>&copy; 2025 Pagnes Élégance. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+
+        <button id="back-to-top" class="fixed bottom-6 right-6 bg-yellow-600 text-white rounded-full p-3 shadow-lg hover:bg-yellow-700 transition-colors hidden">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <script src="scripts/script.js"></script>
+    </body>
+    </html>

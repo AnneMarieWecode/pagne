@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #8B4513;
+    --secondary: #CD853F;
+    --accent: #F4A460;
+    --light: #FAEBD7;
+    --dark: #3E2723;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-overlay {
+    background: linear-gradient(to right, rgba(62, 39, 35, 0.8) 0%, rgba(62, 39, 35, 0.4) 100%);
+}
+
+.pattern-bg {
+    background-image: url('/api/placeholder/800/800');
+    background-size: 300px;
+    opacity: 0.07;
+}
+
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease forwards;
+}
+
+.animate-slide-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideRight 1s ease forwards;
+}
+
+.animate-scale {
+    transition: transform 0.3s ease;
+}
+
+.animate-scale:hover {
+    transform: scale(1.05);
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.pagne-card {
+background-color: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagne-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.pagne-image {
+height: 280px;
+overflow: hidden;
+position: relative;
+}
+
+.pagne-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+
+.pagne-card:hover .pagne-image img {
+transform: scale(1.1);
+}
+
+.pagne-category {
+position: absolute;
+top: 15px;
+right: 15px;
+background-color: var(--secondary);
+color: white;
+padding: 5px 12px;
+border-radius: 25px;
+font-size: 0.8rem;
+font-weight: 500;
+}
+
+.pagne-info {
+padding: 20px;
+}
+
+.pagne-name {
+font-family: 'Playfair Display', serif;
+font-size: 1.4rem;
+color: var(--dark);
+margin-bottom: 8px;
+font-weight: 600;
+}
+
+.pagne-description {
+color: #666;
+font-size: 0.9rem;
+margin-bottom: 15px;
+line-height: 1.5;
+}
+
+.pagne-price {
+font-weight: 600;
+color: var(--primary);
+font-size: 1.2rem;
+margin-bottom: 15px;
+}
+.collections-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 30px;
+}
+.contact-btn {
+display: inline-block;
+width: 100%;
+padding: 10px;
+background-color: var(--primary);
+color: white;
+text-align: center;
+border-radius: 5px;
+font-weight: 500;
+transition: background-color 0.3s ease;
+text-decoration: none;
+}
+
+.contact-btn:hover {
+background-color: var(--dark);
+}
+
+.pagination {
+display: flex;
+justify-content: center;
+margin-top: 50px;
+gap: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from { 
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation de clignotement pour les éléments en promotion */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s infinite;
+}
+
+/* Animation de l'arrière-plan */
+@keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+.bg-animate {
+    background-size: 200% 200%;
+    animation: backgroundMove 15s ease infinite alternate;
+}
+
+/* Carrousel de produits */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex: 0 0 auto;
+}
+
+.cart-bubble {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animation pour le texte qui écrit */
+.typing-animation {
+    overflow: hidden;
+    border-right: 0.15em solid var(--accent);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: 
+        typing 3.5s steps(30, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent) }
+}

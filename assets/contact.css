@@ -1,0 +1,81 @@
+:root {
+    --primary: #EAB308;
+    --secondary: #B45309;
+    --dark: #1F2937;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus, 
+.contact-form select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.2);
+    border-color: #EAB308;
+}
+
+.contact-icon-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.map-container {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    background-color: rgba(234, 179, 8, 0.1);
+    color: #EAB308;
+    font-size: 1.5rem;
+}
+
+.section-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-floating {
+    position: relative;
+}
+
+.form-floating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    color: #6B7280;
+}
+
+.form-floating input:focus ~ label,
+.form-floating input:not(:placeholder-shown) ~ label,
+.form-floating textarea:focus ~ label,
+.form-floating textarea:not(:placeholder-shown) ~ label,
+.form-floating select:focus ~ label,
+.form-floating select:not(:placeholder-shown) ~ label {
+    transform: translateY(-0.5rem) scale(0.85);
+    opacity: 1;
+    color: #EAB308;
+    padding: 0 0.25rem;
+    left: 0.75rem;
+    background-color: white;
+    z-index: 1;
+}

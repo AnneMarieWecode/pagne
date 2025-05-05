@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de Pagnes - Pagnes Élégance</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/recherche.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="main-nav">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="text-2xl font-bold text-yellow-700">
+                        <span class="text-3xl">P</span>agnes<span class="text-yellow-600">Élégance</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Accueil</a>
+                    <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Qui sommes-nous</a>
+                    <a href="collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Collections</a>
+                    <a href="#" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Rechercher</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium font-bold">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="commande.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                        Faire une commande
+                    </a>
+                    <button class="text-gray-700 md:hidden" id="mobile-menu-button">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden transition-all duration-300 pt-4 pb-2" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Accueil</a>
+                    <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Qui sommes-nous</a>
+                    <a href="collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Collections</a>
+                    <a href="#" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Rechercher</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Rechercher un Pagne</h1>
+            <div class="w-20 h-1 bg-yellow-500 mx-auto mb-4"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto">Trouvez le pagne parfait pour votre style en cherchant par nom. Notre collection riche et variée vous attend.</p>
+        </div>
+
+        <div class="max-w-lg mx-auto mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="mb-4">
+                    <label for="search-input" class="block text-gray-700 font-medium mb-2">Nom du Pagne</label>
+                    <div class="flex">
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            placeholder="Ex: Kente, Bogolan, Ankara..." 
+                            class="flex-grow border border-gray-300 rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                        >
+                        <button 
+                            id="search-button"
+                            class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-r-md transition-colors flex items-center"
+                        >
+                            <i class="fas fa-search mr-2"></i> Rechercher
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap -mx-2">
+                    <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
+                        <label for="category-filter" class="block text-gray-700 font-medium mb-2">Filtrer par catégorie</label>
+                        <select id="category-filter" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                            <option value="">Toutes les catégories</option>
+                            <option value="Wax">Wax</option>
+                            <option value="Bogolan">Bogolan</option>
+                            <option value="Kente">Kente</option>
+                            <option value="Bazin">Bazin</option>
+                            <option value="Ankara">Ankara</option>
+                        </select>
+                    </div>
+                    <div class="w-full md:w-1/2 px-2">
+                        <label for="price-filter" class="block text-gray-700 font-medium mb-2">Filtrer par prix</label>
+                        <select id="price-filter" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                            <option value="">Tous les prix</option>
+                            <option value="low">Moins de 10.000 FCFA</option>
+                            <option value="medium">10.000 - 20.000 FCFA</option>
+                            <option value="high">Plus de 20.000 FCFA</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading"></div>
+
+        <div id="search-results-container" class="search-results-container">
+            <div id="no-search" class="text-center py-12">
+            </div>
+
+            <div id="no-results" class="hidden text-center py-12">
+                <i class="fas fa-search text-4xl text-gray-400 mb-4"></i>
+                <p class="text-gray-500 text-lg">Aucun résultat trouvé pour votre recherche</p>
+                <p class="text-gray-500">Essayez avec d'autres termes ou consultez notre <a href="collection.html" class="text-yellow-600 hover:underline">collection complète</a></p>
+            </div>
+
+            <div id="results-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-xl font-bold mb-4">
+                        <span class="text-2xl">P</span>agnes<span class="text-yellow-500">Élégance</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">L'authentique élégance africaine, tissu après tissu.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Liens Rapides</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Collection</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Nouveautés</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Promotions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Histoire</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Service Client</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Mon Compte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Suivi de Commande</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Retours & Échanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">Abidjan, Côte d'Ivoire</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">+225 20 22 33 44</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">contact@pagneselegance.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">Lun-Sam: 9h-18h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+                <p>&copy; 2025 Pagnes Élégance. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/recherche.js"></script>
+</body>
+</html>

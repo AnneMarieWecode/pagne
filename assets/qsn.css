@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Ajout des styles manquants */
+:root {
+--primary: #8B4513;
+--secondary: #CD853F;
+--accent: #F4A460;
+--light: #FAEBD7;
+--dark: #3E2723;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+
+.section {
+    padding: 80px 0;
+}
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.about-image img {
+    border-radius: 8px;
+    width: 100%;
+}
+.values-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.value-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+.value-card:hover {
+    transform: translateY(-10px);
+}
+.value-icon {
+    font-size: 2rem;
+    color: #f8b400;
+    margin-bottom: 20px;
+}
+.value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.cta {
+    padding: 80px 0;
+    text-align: center;
+}
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cta-btn {
+    display: inline-block;
+    background-color: white;
+    color: #f8b400;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.cta-btn:hover {
+    background-color: #333;
+    color: white;
+}
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .values-cards {
+        grid-template-columns: 1fr;
+    }
+}

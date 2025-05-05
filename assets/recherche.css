@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+--primary: #8B4513;
+--secondary: #CD853F;
+--accent: #F4A460;
+--light: #FAEBD7;
+--dark: #3E2723;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+.search-results-container {
+min-height: 300px;
+}
+.pagne-card {
+transition: transform 0.3s ease;
+}
+.pagne-card:hover {
+transform: translateY(-5px);
+}
+.loading {
+display: none;
+border: 4px solid #f3f3f3;
+border-top: 4px solid #EAB308;
+border-radius: 50%;
+width: 30px;
+height: 30px;
+animation: spin 1s linear infinite;
+margin: 20px auto;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

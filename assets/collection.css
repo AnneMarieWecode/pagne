@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #8B4513;
+    --secondary: #CD853F;
+    --accent: #F4A460;
+    --light: #FAEBD7;
+    --dark: #3E2723;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.hero-collections {
+    background-color: var(--primary);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-collections h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-collections p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    color: var(--dark);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pagne-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagne-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.pagne-image {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pagne-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pagne-card:hover .pagne-image img {
+    transform: scale(1.1);
+}
+
+.pagne-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--secondary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.pagne-info {
+    padding: 20px;
+}
+
+.pagne-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.pagne-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.pagne-price {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.contact-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: var(--dark);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.page-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    color: var(--dark);
+    transition: all 0.3s ease;
+}
+
+.page-link:hover, .page-link.active {
+    background-color: var(--secondary);
+    color: white;
+    border-color: var(--secondary);
+}
+
+.cta {
+    background-color: var(--light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--dark);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .hero-collections h1 {
+        font-size: 2.2rem;
+    }
+    
+    .filter-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .collections-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}

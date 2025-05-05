@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Pagnes Élégance</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/collection.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="main-nav">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="text-2xl font-bold text-yellow-700">
+                        <span class="text-3xl">P</span>agnes<span class="text-yellow-600">Élégance</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Accueil</a>
+                    <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Qui sommes-nous</a>
+                    <a href="#" class="text-yellow-600 font-medium">Collections</a>
+                    <a href="recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Rechercher</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="commande.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                        Faire une commande
+                    </a>
+                    <button class="text-gray-700 md:hidden" id="mobile-menu-button">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden transition-all duration-300 pt-4 pb-2" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Accueil</a>
+                    <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Qui sommes-nous</a>
+                    <a href="#" class="text-yellow-600 font-medium py-2 border-b border-gray-100">Collections</a>
+                    <a href="recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Rechercher</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-collections">
+        <div class="hero-content">
+            <h1>Nos Collections de Pagnes</h1>
+            <p>Découvrez notre sélection de pagnes traditionnels africains, chacun avec sa propre histoire et symbolique culturelle</p>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="content">
+            <div class="filter-bar">
+                <button class="filter-btn active">Tous</button>
+                <button class="filter-btn">Wax hollandais</button>
+                <button class="filter-btn">Bogolan</button>
+                <button class="filter-btn">Kente</button>
+                <button class="filter-btn">Bazin</button>
+                <button class="filter-btn">Adinkra</button>
+            </div>
+
+            <div class="collections-grid">
+                <!-- Pagne 1 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Pagne Kita">
+                        <span class="pagne-category">Bogolan</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Bogolan Kita</h3>
+                        <p class="pagne-description">Pagne traditionnel du Mali avec motifs symbolisant force et courage.</p>
+                        <div class="pagne-price">25 000 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+                <!-- Pagne 2 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Wax Floral">
+                        <span class="pagne-category">Wax hollandais</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Wax Floral Élégance</h3>
+                        <p class="pagne-description">Motifs floraux vibrants sur fond bleu profond, idéal pour occasions spéciales.</p>
+                        <div class="pagne-price">18 500 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+                <!-- Pagne 3 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Kente Royal">
+                        <span class="pagne-category">Kente</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Kente Royal</h3>
+                        <p class="pagne-description">Tissage traditionnel ghanéen aux couleurs vives, porté lors des cérémonies.</p>
+                        <div class="pagne-price">35 000 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+                <!-- Pagne 4 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Bazin Riche">
+                        <span class="pagne-category">Bazin</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Bazin Riche Brodé</h3>
+                        <p class="pagne-description">Bazin de haute qualité avec broderies dorées, symbole de prestige.</p>
+                        <div class="pagne-price">28 000 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+                <!-- Pagne 5 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Adinkra Symboles">
+                        <span class="pagne-category">Adinkra</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Adinkra Symboles</h3>
+                        <p class="pagne-description">Tissu orné de symboles adinkra, chacun porteur d'un message de sagesse.</p>
+                        <div class="pagne-price">22 500 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+                <!-- Pagne 6 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Wax Papillon">
+                        <span class="pagne-category">Wax hollandais</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Wax Papillons Dansants</h3>
+                        <p class="pagne-description">Motifs de papillons symbolisant liberté et transformation sur fond rouge.</p>
+                        <div class="pagne-price">19 800 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+                <!-- Pagne 7 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Bogolan Bambara">
+                        <span class="pagne-category">Bogolan</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Bogolan Bambara</h3>
+                        <p class="pagne-description">Motifs géométriques traditionnels réalisés avec des teintures naturelles.</p>
+                        <div class="pagne-price">26 500 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+
+                <!-- Pagne 8 -->
+                <div class="pagne-card">
+                    <div class="pagne-image">
+                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Kente Festival">
+                        <span class="pagne-category">Kente</span>
+                    </div>
+                    <div class="pagne-info">
+                        <h3 class="pagne-name">Kente Festival</h3>
+                        <p class="pagne-description">Tissage multicolore avec motifs traditionnels célébrant joie et festivités.</p>
+                        <div class="pagne-price">32 000 FCFA</div>
+                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="content">
+            <h2>Une Commande Personnalisée ?</h2>
+            <p>Vous cherchez un pagne spécifique ou souhaitez créer un modèle unique ? Contactez-nous pour discuter de vos besoins.</p>
+            <a href="contact.html" class="cta-btn">Contactez-nous</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="text-xl font-bold mb-4">
+                        <span class="text-2xl">P</span>agnes<span class="text-yellow-500">Élégance</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 text-sm">L'authentique élégance africaine, tissu après tissu.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Liens Rapides</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Collection</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Nouveautés</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Promotions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Histoire</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Service Client</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Mon Compte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Suivi de Commande</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Retours & Échanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">Abidjan, Côte d'Ivoire</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">+225 20 22 33 44</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">contact@pagneselegance.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-yellow-500"></i>
+                            <span class="text-gray-400">Lun-Sam: 9h-18h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
+                <p>&copy; 2025 Pagnes Élégance. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/collection.js"></script>
+</body>
+</html>
