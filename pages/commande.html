@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections - Pagnes Élégance</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/collection.css">
+    <title>Pagnes Élégance - Commande de Pagnes Traditionnels</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-    <!-- Navigation -->
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="main-nav">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
@@ -24,13 +24,13 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Accueil</a>
                     <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Qui sommes-nous</a>
-                    <a href="#" class="text-yellow-600 font-medium">Collections</a>
+                    <a href="collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Collections</a>
                     <a href="recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Rechercher</a>
                     <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
                 </div>
                 
                 <div class="flex items-center space-x-4">
-                    <a href="commande.html" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
+                    <a href="#" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white text-sm py-2 px-4 rounded transition-colors">
                         Commander
                     </a>
                     <button class="text-gray-700 md:hidden" id="mobile-menu-button">
@@ -44,7 +44,7 @@
                 <div class="flex flex-col space-y-3">
                     <a href="../index.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Accueil</a>
                     <a href="qsn.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Qui sommes-nous</a>
-                    <a href="#" class="text-yellow-600 font-medium py-2 border-b border-gray-100">Collections</a>
+                    <a href="collection.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Collections</a>
                     <a href="recherche.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2 border-b border-gray-100">Rechercher</a>
                     <a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition-colors font-medium py-2">Contact</a>
                 </div>
@@ -52,229 +52,582 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-collections">
-        <div class="hero-content">
-            <h1>Nos Collections de Pagnes</h1>
-            <p>Découvrez notre sélection de pagnes traditionnels africains, chacun avec sa propre histoire et symbolique culturelle</p>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Commande de Pagnes Traditionnels</h1>
+            <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Personnalisez votre commande de pagnes traditionnels africains et laissez-nous vous offrir l'élégance que vous méritez.</p>
         </div>
-    </section>
 
-    <!-- Collections Section -->
-    <section class="section" style="background-color: #f9f9f9;">
-        <div class="content">
-
-            <div class="collections-grid">
-                <!-- Pagne 1 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Pagne Kita">
-                        <span class="pagne-category">Bogolan</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Bogolan Kita</h3>
-                        <p class="pagne-description">Pagne traditionnel du Mali avec motifs symbolisant force et courage.</p>
-                        <div class="pagne-price">25 000 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
-
-                <!-- Pagne 2 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Wax Floral">
-                        <span class="pagne-category">Wax hollandais</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Wax Floral Élégance</h3>
-                        <p class="pagne-description">Motifs floraux vibrants sur fond bleu profond, idéal pour occasions spéciales.</p>
-                        <div class="pagne-price">18 500 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
-
-                <!-- Pagne 3 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Kente Royal">
-                        <span class="pagne-category">Kente</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Kente Royal</h3>
-                        <p class="pagne-description">Tissage traditionnel ghanéen aux couleurs vives, porté lors des cérémonies.</p>
-                        <div class="pagne-price">35 000 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
-
-                <!-- Pagne 4 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Bazin Riche">
-                        <span class="pagne-category">Bazin</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Bazin Riche Brodé</h3>
-                        <p class="pagne-description">Bazin de haute qualité avec broderies dorées, symbole de prestige.</p>
-                        <div class="pagne-price">28 000 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
-
-                <!-- Pagne 5 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Adinkra Symboles">
-                        <span class="pagne-category">Adinkra</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Adinkra Symboles</h3>
-                        <p class="pagne-description">Tissu orné de symboles adinkra, chacun porteur d'un message de sagesse.</p>
-                        <div class="pagne-price">22 500 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
-
-                <!-- Pagne 6 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Wax Papillon">
-                        <span class="pagne-category">Wax hollandais</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Wax Papillons Dansants</h3>
-                        <p class="pagne-description">Motifs de papillons symbolisant liberté et transformation sur fond rouge.</p>
-                        <div class="pagne-price">19 800 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
-
-                <!-- Pagne 7 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Bogolan Bambara">
-                        <span class="pagne-category">Bogolan</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Bogolan Bambara</h3>
-                        <p class="pagne-description">Motifs géométriques traditionnels réalisés avec des teintures naturelles.</p>
-                        <div class="pagne-price">26 500 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
-
-                <!-- Pagne 8 -->
-                <div class="pagne-card">
-                    <div class="pagne-image">
-                        <img src="https://img.freepik.com/vecteurs-premium/dessins-abstraits-dessines-main-sans-couture-origine-ethnique-style-africain_711910-483.jpg?uid=R99967860&semt=ais_hybrid&w=740" alt="Kente Festival">
-                        <span class="pagne-category">Kente</span>
-                    </div>
-                    <div class="pagne-info">
-                        <h3 class="pagne-name">Kente Festival</h3>
-                        <p class="pagne-description">Tissage multicolore avec motifs traditionnels célébrant joie et festivités.</p>
-                        <div class="pagne-price">32 000 FCFA</div>
-                        <a href="contact.html" class="contact-btn">Contactez-moi</a>
-                    </div>
-                </div>
+        <!-- Order Form -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="bg-yellow-600 text-white py-5 px-6">
+                <h2 class="text-xl font-semibold">Formulaire de Commande</h2>
+                <p class="text-yellow-100 text-sm">Tous les champs marqués d'un * sont obligatoires</p>
             </div>
 
-            <div class="pagination">
-                <a href="#" class="page-link active">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
-            </div>
+            <form class="p-6 md:p-8" id="orderForm">
+                <!-- Personal Information -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Informations Personnelles</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Nom et Prénom *</label>
+                            <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                        
+                        <div>
+                            <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Adresse de livraison *</label>
+                            <input type="text" id="address" name="address" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Details -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Détails de la Commande</h3>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Type de Pagne *</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="flex items-center">
+                                <input type="radio" id="waxHollandais" name="pagneType" value="Wax hollandais" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500" required>
+                                <label for="waxHollandais" class="ml-2 text-sm text-gray-700">Wax hollandais</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="waxAfricain" name="pagneType" value="Wax africain" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="waxAfricain" class="ml-2 text-sm text-gray-700">Wax africain</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="basin" name="pagneType" value="Basin" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="basin" class="ml-2 text-sm text-gray-700">Basin (Bazin)</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="bogolan" name="pagneType" value="Bogolan" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="bogolan" class="ml-2 text-sm text-gray-700">Bogolan</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="kente" name="pagneType" value="Kente" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="kente" class="ml-2 text-sm text-gray-700">Kente</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="indigo" name="pagneType" value="Indigo" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="indigo" class="ml-2 text-sm text-gray-700">Indigo</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="adire" name="pagneType" value="Adire" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="adire" class="ml-2 text-sm text-gray-700">Adire</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="autre" name="pagneType" value="Autre" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="autre" class="ml-2 text-sm text-gray-700">Autre</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 hidden" id="autreTypeContainer">
+                            <label for="autreType" class="block text-sm font-medium text-gray-700 mb-1">Précisez le type</label>
+                            <input type="text" id="autreType" name="autreType" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantité (en coupons) *</label>
+                            <div class="flex items-center">
+                                <input type="number" id="quantity" name="quantity" min="1" value="1" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                                <div class="ml-3 text-xs text-gray-500">1 coupon = 6 yards ≈ 5,5 mètres</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="mainColor" class="block text-sm font-medium text-gray-700 mb-1">Couleur(s) principale(s) *</label>
+                            <input type="text" id="mainColor" name="mainColor" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                        
+                        <div>
+                            <label for="secondaryColor" class="block text-sm font-medium text-gray-700 mb-1">Couleur(s) secondaire(s)</label>
+                            <input type="text" id="secondaryColor" name="secondaryColor" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Motifs *</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="geometriques" name="motifs[]" value="Géométriques" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="geometriques" class="ml-2 text-sm text-gray-700">Géométriques</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="floraux" name="motifs[]" value="Floraux" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="floraux" class="ml-2 text-sm text-gray-700">Floraux</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="animaux" name="motifs[]" value="Animaux" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="animaux" class="ml-2 text-sm text-gray-700">Animaux</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="symboles" name="motifs[]" value="Symboles traditionnels" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="symboles" class="ml-2 text-sm text-gray-700">Symboles traditionnels</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="personnalises" name="motifs[]" value="Personnalisés" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="personnalises" class="ml-2 text-sm text-gray-700">Personnalisés</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <label for="motifsDetails" class="block text-sm font-medium text-gray-700 mb-1">Description détaillée des motifs souhaités</label>
+                            <textarea id="motifsDetails" name="motifsDetails" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Finition</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="flex items-center">
+                                <input type="radio" id="bordsDroits" name="finition" value="Bords droits standards" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500" checked>
+                                <label for="bordsDroits" class="ml-2 text-sm text-gray-700">Bords droits standards</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="ourlets" name="finition" value="Ourlets" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="ourlets" class="ml-2 text-sm text-gray-700">Ourlets</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="franges" name="finition" value="Franges" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="franges" class="ml-2 text-sm text-gray-700">Franges</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="radio" id="autreFinition" name="finition" value="Autre" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="autreFinition" class="ml-2 text-sm text-gray-700">Autre</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 hidden" id="autreFinitionContainer">
+                            <label for="autreFinitionDetail" class="block text-sm font-medium text-gray-700 mb-1">Précisez la finition</label>
+                            <input type="text" id="autreFinitionDetail" name="autreFinitionDetail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Utilisation prévue</label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="tenueComplete" name="utilisation[]" value="Tenue complète" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="tenueComplete" class="ml-2 text-sm text-gray-700">Tenue complète</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="robe" name="utilisation[]" value="Robe" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="robe" class="ml-2 text-sm text-gray-700">Robe</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="jupe" name="utilisation[]" value="Jupe" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="jupe" class="ml-2 text-sm text-gray-700">Jupe</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="chemise" name="utilisation[]" value="Chemise/Chemisier" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="chemise" class="ml-2 text-sm text-gray-700">Chemise/Chemisier</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="decoration" name="utilisation[]" value="Décoration" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="decoration" class="ml-2 text-sm text-gray-700">Décoration</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="ceremonie" name="utilisation[]" value="Cérémonie" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="ceremonie" class="ml-2 text-sm text-gray-700">Cérémonie</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="autreUtilisation" name="utilisation[]" value="Autre" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="autreUtilisation" class="ml-2 text-sm text-gray-700">Autre</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 hidden" id="autreUtilisationContainer">
+                            <label for="autreUtilisationDetail" class="block text-sm font-medium text-gray-700 mb-1">Précisez l'utilisation</label>
+                            <input type="text" id="autreUtilisationDetail" name="autreUtilisationDetail" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Options -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Options Supplémentaires</h3>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Personnalisation</label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="broderies" name="personnalisation[]" value="Broderies" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="broderies" class="ml-2 text-sm text-gray-700">Broderies</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="perles" name="personnalisation[]" value="Perles" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="perles" class="ml-2 text-sm text-gray-700">Perles</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="appliques" name="personnalisation[]" value="Appliqués" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="appliques" class="ml-2 text-sm text-gray-700">Appliqués</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="impression" name="personnalisation[]" value="Impression de nom/message" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="impression" class="ml-2 text-sm text-gray-700">Impression de nom/message</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="autrePersonnalisation" name="personnalisation[]" value="Autre" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="autrePersonnalisation" class="ml-2 text-sm text-gray-700">Autre</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <label for="personnalisationDetails" class="block text-sm font-medium text-gray-700 mb-1">Détails de personnalisation</label>
+                            <textarea id="personnalisationDetails" name="personnalisationDetails" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Services complémentaires</label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="conseilsStyle" name="services[]" value="Conseils de style" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="conseilsStyle" class="ml-2 text-sm text-gray-700">Conseils de style</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="couture" name="services[]" value="Service de couture" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="couture" class="ml-2 text-sm text-gray-700">Service de couture</label>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="accessoires" name="services[]" value="Accessoires assortis" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                <label for="accessoires" class="ml-2 text-sm text-gray-700">Accessoires assortis</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Delivery and Payment -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Livraison et Paiement</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="deliveryDate" class="block text-sm font-medium text-gray-700 mb-1">Date de livraison souhaitée</label>
+                            <input type="date" id="deliveryDate" name="deliveryDate" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Mode de paiement *</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <input type="radio" id="especes" name="paymentMethod" value="Espèces" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500" required>
+                                    <label for="especes" class="ml-2 text-sm text-gray-700">Espèces</label>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <input type="radio" id="virement" name="paymentMethod" value="Virement bancaire" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                    <label for="virement" class="ml-2 text-sm text-gray-700">Virement bancaire</label>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <input type="radio" id="mobileMoney" name="paymentMethod" value="Mobile Money" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                    <label for="mobileMoney" class="ml-2 text-sm text-gray-700">Mobile Money</label>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <input type="radio" id="carteBancaire" name="paymentMethod" value="Carte bancaire" class="h-4 w-4 text-yellow-600 focus:ring-yellow-500">
+                                    <label for="carteBancaire" class="ml-2 text-sm text-gray-700">Carte bancaire</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="additionalNotes" class="block text-sm font-medium text-gray-700 mb-1">Notes supplémentaires</label>
+                        <textarea id="additionalNotes" name="additionalNotes" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-md transition-colors">
+                        Envoyer ma commande
+                    </button>
+                </div>
+            </form>
         </div>
-    </section>
+    </main>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <div class="content">
-            <h2>Une Commande Personnalisée ?</h2>
-            <p>Vous cherchez un pagne spécifique ou souhaitez créer un modèle unique ? Contactez-nous pour discuter de vos besoins.</p>
-            <a href="contact.html" class="cta-btn">Contactez-nous</a>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-white py-10 md:py-16">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Brand -->
+                <!-- Company Info -->
                 <div>
-                    <div class="text-xl font-bold mb-4">
-                        <span class="text-2xl">P</span>agnes<span class="text-yellow-500">Élégance</span>
-                    </div>
-                    <p class="text-gray-400 mb-4 text-sm">L'authentique élégance africaine, tissu après tissu.</p>
+                    <h4 class="text-xl font-bold text-yellow-500 mb-4">PagnesÉlégance</h4>
+                    <p class="text-gray-300 mb-4">Spécialiste des pagnes traditionnels africains depuis 2015. Nous valorisons l'artisanat local et les motifs authentiques de notre riche patrimoine culturel.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                        <a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                        <a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                        <a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
-                            <i class="fab fa-pinterest-p"></i>
+                        <a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">
+                            <i class="fab fa-pinterest"></i>
                         </a>
                     </div>
                 </div>
                 
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Liens Rapides</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Collection</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Nouveautés</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Promotions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Notre Histoire</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Blog</a></li>
+                    <h4 class="text-lg font-semibold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">Accueil</a></li>
+                        <li><a href="pages/qsn.html" class="text-gray-300 hover:text-yellow-500 transition-colors">Qui sommes-nous</a></li>
+                        <li><a href="pages/collection.html" class="text-gray-300 hover:text-yellow-500 transition-colors">Collections</a></li>
+                        <li><a href="pages/recherche.html" class="text-gray-300 hover:text-yellow-500 transition-colors">Rechercher</a></li>
+                        <li><a href="pages/contact.html" class="text-gray-300 hover:text-yellow-500 transition-colors">Contact</a></li>
+                        <li><a href="pages/blog.html" class="text-gray-300 hover:text-yellow-500 transition-colors">Blog</a></li>
                     </ul>
                 </div>
                 
-                <!-- Customer Service -->
+                <!-- Categories -->
                 <div>
-                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Service Client</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Mon Compte</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Suivi de Commande</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">FAQ</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Retours & Échanges</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Contactez-nous</a></li>
+                    <h4 class="text-lg font-semibold mb-4">Types de Pagnes</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">Wax Hollandais</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">Basin (Bazin)</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">Bogolan</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">Kente</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">Adire</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-500 transition-colors">Indigo</a></li>
                     </ul>
                 </div>
                 
-                <!-- Contact Info -->
+                <!-- Contact -->
                 <div>
-                    <h3 class="font-semibold text-lg mb-4 text-yellow-500">Contact</h3>
-                    <ul class="space-y-3 text-sm">
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-500"></i>
-                            <span class="text-gray-400">Abidjan, Côte d'Ivoire</span>
+                            <span>123 Rue de l'Élégance<br>Quartier des Arts<br>Dakar, Sénégal</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-3 text-yellow-500"></i>
-                            <span class="text-gray-400">+225 20 22 33 44</span>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-yellow-500"></i>
+                            <span>+221 76 123 45 67</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-3 text-yellow-500"></i>
-                            <span class="text-gray-400">contact@pagneselegance.com</span>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-yellow-500"></i>
+                            <span>contact@pagneselegance.com</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-clock mt-1 mr-3 text-yellow-500"></i>
-                            <span class="text-gray-400">Lun-Sam: 9h-18h</span>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-yellow-500"></i>
+                            <span>Lun-Sam: 9h - 18h</span>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
-                <p>&copy; 2025 Pagnes Élégance. Tous droits réservés.</p>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 PagnesÉlégance. Tous droits réservés.</p>
+                <div class="mt-2">
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors mx-2">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors mx-2">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors mx-2">Conditions générales</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="../scripts/collection.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Form Interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Other Type Input Toggle
+            const autreTypeRadio = document.getElementById('autre');
+            const autreTypeContainer = document.getElementById('autreTypeContainer');
+            
+            autreTypeRadio.addEventListener('change', function() {
+                autreTypeContainer.classList.toggle('hidden', !this.checked);
+                if (this.checked) {
+                    document.getElementById('autreType').setAttribute('required', '');
+                } else {
+                    document.getElementById('autreType').removeAttribute('required');
+                }
+            });
+            
+            // Other Finition Input Toggle
+            const autreFinitionRadio = document.getElementById('autreFinition');
+            const autreFinitionContainer = document.getElementById('autreFinitionContainer');
+            
+            autreFinitionRadio.addEventListener('change', function() {
+                autreFinitionContainer.classList.toggle('hidden', !this.checked);
+                if (this.checked) {
+                    document.getElementById('autreFinitionDetail').setAttribute('required', '');
+                } else {
+                    document.getElementById('autreFinitionDetail').removeAttribute('required');
+                }
+            });
+            
+            // Other Utilisation Input Toggle
+            const autreUtilisationCheckbox = document.getElementById('autreUtilisation');
+            const autreUtilisationContainer = document.getElementById('autreUtilisationContainer');
+            
+            autreUtilisationCheckbox.addEventListener('change', function() {
+                autreUtilisationContainer.classList.toggle('hidden', !this.checked);
+            });
+            
+            // Form Validation and Submission
+            const orderForm = document.getElementById('orderForm');
+            
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                const requiredFields = orderForm.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.classList.add('border-red-500');
+                    } else {
+                        field.classList.remove('border-red-500');
+                    }
+                });
+                
+                // Check if at least one motif is selected
+                const motifs = orderForm.querySelectorAll('input[name="motifs[]"]:checked');
+                if (motifs.length === 0) {
+                    isValid = false;
+                    document.querySelector('label[for="geometriques"]').closest('div').classList.add('text-red-500');
+                } else {
+                    document.querySelector('label[for="geometriques"]').closest('div').classList.remove('text-red-500');
+                }
+                
+                if (isValid) {
+                    // Here you would normally submit the form data
+                    // For demo purposes, display success message
+                    const formData = new FormData(orderForm);
+                    let orderDetails = {};
+                    
+                    for (const [key, value] of formData.entries()) {
+                        orderDetails[key] = value;
+                    }
+                    
+                    console.log('Order details:', orderDetails);
+                    
+                    // Show success message
+                    orderForm.innerHTML = `
+                        <div class="text-center py-8">
+                            <div class="text-5xl text-green-500 mb-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Commande envoyée avec succès!</h3>
+                            <p class="text-gray-600 mb-6">Merci pour votre commande. Nous vous contacterons bientôt pour confirmer les détails.</p>
+                            <p class="text-gray-600 mb-4">Numéro de référence: <span class="font-semibold">${generateOrderReference()}</span></p>
+                            <a href="#" class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-2 px-6 rounded-md transition-colors">
+                                Retour à l'accueil
+                            </a>
+                        </div>
+                    `;
+                }
+            });
+            
+            // Generate a random order reference
+            function generateOrderReference() {
+                const prefix = 'PE';
+                const date = new Date().toISOString().slice(2,10).replace(/-/g, '');
+                const random = Math.floor(1000 + Math.random() * 9000);
+                return `${prefix}${date}-${random}`;
+            }
+        });
+        
+        // Scroll Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation shrink on scroll
+            const nav = document.getElementById('main-nav');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('py-2');
+                    nav.classList.remove('py-3');
+                } else {
+                    nav.classList.add('py-3');
+                    nav.classList.remove('py-2');
+                }
+            });
+            
+            // Initialize GSAP animations if available
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+                
+                // Animate form sections
+                gsap.utils.toArray('.mb-8').forEach((section, i) => {
+                    gsap.fromTo(section, 
+                        { y: 50, opacity: 0 },
+                        { 
+                            y: 0, 
+                            opacity: 1,
+                            duration: 0.8,
+                            ease: "power2.out",
+                            scrollTrigger: {
+                                trigger: section,
+                                start: "top 80%",
+                                toggleActions: "play none none none"
+                            }
+                        }
+                    );
+                });
+            }
+        });
+    </script>
 </body>
 </html>
